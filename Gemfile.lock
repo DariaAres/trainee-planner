@@ -95,6 +95,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -175,6 +179,9 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
+    rails-i18n (7.0.7)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     railties (7.0.6)
       actionpack (= 7.0.6)
       activesupport (= 7.0.6)
@@ -284,6 +291,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   devise
+  dotenv-rails
   importmap-rails
   jbuilder
   jsbundling-rails
@@ -292,6 +300,7 @@ DEPENDENCIES
   rails (~> 7.0.6)
   rails-controller-testing
   rails-dom-testing
+  rails-i18n
   redis (~> 4.0)
   rubocop
   rubocop-rails
@@ -304,7 +313,6 @@ DEPENDENCIES
   turbo-rails
   tzinfo-data
   web-console
-  zeitwerk
 
 RUBY VERSION
    ruby 3.2.2p53

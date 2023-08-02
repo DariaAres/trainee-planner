@@ -59,12 +59,17 @@ gem "jsbundling-rails"
 # Devise is a flexible authentication solution for Rails based on Warden. [https://github.com/heartcombo/devise]
 gem "devise"
 
+# Centralization of locale data collection for Ruby on Rails. [https://github.com/svenfuchs/rails-i18n]
+gem 'rails-i18n'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
 
   # rspec-rails is a testing framework for Rails 5+. [https://github.com/rspec/rspec-rails/tree/6-0-maintenance]
   gem 'rspec-rails'
+  # A Ruby gem to load environment variables from `.env` [https://github.com/bkeepers/dotenv]
+  gem 'dotenv-rails'
 end
 
 group :development do
