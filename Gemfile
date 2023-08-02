@@ -122,4 +122,6 @@ group :test do
 
   # Brings back assigns to your controller tests, assert_template. [https://github.com/rails/rails-controller-testing]
   gem 'rails-controller-testing'
+  # Selenium implements the W3C WebDriver protocol to automate popular browsers. [https://github.com/SeleniumHQ/selenium/wiki/Ruby-Bindings]
+  gem 'selenium-webdriver', '~> 4.4'
 end
