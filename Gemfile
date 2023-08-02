@@ -77,3 +77,11 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+
+group :test do
+  # Strategies for cleaning databases using ActiveRecord. [https://github.com/DatabaseCleaner/database_cleaner]
+  gem 'database_cleaner-active_record'
+
+  # Strategies for cleaning databases using Redis. [https://github.com/DatabaseCleaner/database_cleaner]
+  gem 'database_cleaner-redis'
+end
