@@ -57,6 +57,9 @@ group :development, :test do
 
   # A fixtures replacement with a straightforward definition syntax [https://github.com/thoughtbot/factory_bot_rails]
   gem 'factory_bot_rails'
+
+  # Pry is a runtime developer console and IRB alternative with powerful introspection capabilities. [https://github.com/pry/pry]
+  gem 'pry', '~> 0.14.2'
 end
 
 group :development do
