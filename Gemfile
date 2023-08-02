@@ -84,4 +84,7 @@ group :test do
 
   # Strategies for cleaning databases using Redis. [https://github.com/DatabaseCleaner/database_cleaner]
   gem 'database_cleaner-redis'
+
+  # Simple One-Liner Tests for Rails. [https://github.com/thoughtbot/shoulda-matchers]
+  gem 'shoulda-matchers', '~> 5.3'
 end
