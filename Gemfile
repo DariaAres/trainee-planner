@@ -76,4 +76,7 @@ group :test do
 
   # Simple One-Liner Tests for Rails. [https://github.com/thoughtbot/shoulda-matchers]
   gem 'shoulda-matchers', '~> 5.3'
+
+  # SimpleCov is a code coverage analysis tool for Ruby. [https://github.com/simplecov-ruby/simplecov]
+  gem 'simplecov', '~> 0.22.0', require: false
 end
