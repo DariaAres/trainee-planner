@@ -82,6 +82,9 @@ group :development, :test do
 
   # It's a library for generating fake data such as names, addresses, and phone numbers. [https://github.com/faker-ruby/faker]
   gem 'faker'
+
+  # Capybara helps you test web applications by simulating how a real user would interact with your app. [https://github.com/teamcapybara/capybara]
+  gem 'capybara'
 end
 
 group :development do
