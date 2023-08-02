@@ -79,6 +79,9 @@ group :development, :test do
 
   # Pry is a runtime developer console and IRB alternative with powerful introspection capabilities. [https://github.com/pry/pry]
   gem 'pry', '~> 0.14.2'
+
+  # It's a library for generating fake data such as names, addresses, and phone numbers. [https://github.com/faker-ruby/faker]
+  gem 'faker'
 end
 
 group :development do
