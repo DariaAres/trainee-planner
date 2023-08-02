@@ -1,0 +1,39 @@
+name: CI
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2
+
+      - name: Install Dependencies
+        run: |
+          sudo apt install -yqq libpq-dev
+          gem install bundler
+      - name: Install Gems
+        run: |
+          bundle install
+      - name: Run Rubocop
+        continue-on-error: true
+        run: bundle exec rubocop
+
+      - name: Build and test with rspec
+        run: |
+          bundle exec rspec spec
+
+      - name: Create Coverage Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage
+          path: ./coverage
