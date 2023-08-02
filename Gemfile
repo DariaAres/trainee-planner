@@ -79,3 +79,7 @@ group :development do
   # gem "spring"
 end
 
+group :test do
+  # Selenium implements the W3C WebDriver protocol to automate popular browsers. [https://github.com/SeleniumHQ/selenium/wiki/Ruby-Bindings]
+  gem 'selenium-webdriver', '~> 4.4'
+end
