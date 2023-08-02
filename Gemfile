@@ -82,4 +82,7 @@ end
 group :test do
   # Selenium implements the W3C WebDriver protocol to automate popular browsers. [https://github.com/SeleniumHQ/selenium/wiki/Ruby-Bindings]
   gem 'selenium-webdriver', '~> 4.4'
+
+  # Run Selenium tests more easily with automatic installation and updates for all supported webdrivers. [https://github.com/titusfortner/webdrivers]
+  gem 'webdrivers', '~> 5.0'
 end
