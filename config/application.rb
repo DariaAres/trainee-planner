@@ -31,6 +31,8 @@ module TraineePlanner
       system("bundle exec rubocop -A --fail-level=E #{parsable_files.shelljoin}", exception: true)
     end
 
+    config.factory_bot.definition_file_paths = []
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
