@@ -75,8 +75,11 @@ group :test do
   gem 'database_cleaner-redis'
 
   # Simple One-Liner Tests for Rails. [https://github.com/thoughtbot/shoulda-matchers]
-  gem 'shoulda-matchers', '~> 5.3'
+  gem 'shoulda-matchers'
 
   # SimpleCov is a code coverage analysis tool for Ruby. [https://github.com/simplecov-ruby/simplecov]
-  gem 'simplecov', '~> 0.22.0', require: false
+  gem 'simplecov', require: false
+
+  # Brings back assigns to your controller tests, assert_template. [https://github.com/rails/rails-controller-testing]
+  gem 'rails-controller-testing'
 end
