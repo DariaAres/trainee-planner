@@ -29,3 +29,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore .idea and its files
+.idea/*
+
+# Ignore .vscode and its files
+.vscode/*
