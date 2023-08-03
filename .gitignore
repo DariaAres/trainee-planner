@@ -34,3 +34,8 @@
 !/app/assets/builds/.keep
 
 /node_modules
+# Ignore .idea and its files
+.idea/*
+
+# Ignore .vscode and its files
+.vscode/*
