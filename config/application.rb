@@ -25,6 +25,7 @@ module TraineePlanner
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # Robocop autocorrection to generated .rb files with E fail level.
     config.generators.after_generate do |files|
       parsable_files = files.filter { |file| file.end_with?('.rb') }
       system("bundle exec rubocop -A --fail-level=E #{parsable_files.shelljoin}", exception: true)
