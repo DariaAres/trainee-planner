@@ -268,10 +268,11 @@ DEPENDENCIES
   database_cleaner-active_record
   database_cleaner-redis
   cssbundling-rails (~> 1.2)
+  cssbundling-rails
   debug
   importmap-rails
   jbuilder
-  jsbundling-rails (~> 1.1)
+  jsbundling-rails
   mysql2 (~> 0.5)
   puma (~> 5.0)
   rails (~> 7.0.6)
