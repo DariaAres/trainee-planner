@@ -192,12 +192,14 @@ DEPENDENCIES
   mysql2 (~> 0.5)
   puma (~> 5.0)
   rails (~> 7.0.6)
+  rails-dom-testing
   redis (~> 4.0)
   sprockets-rails
   stimulus-rails
   turbo-rails
   tzinfo-data
   web-console
+  zeitwerk
 
 RUBY VERSION
    ruby 3.2.2p53
