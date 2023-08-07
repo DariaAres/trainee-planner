@@ -48,11 +48,11 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-# Comes with installation support for five different tools for bundling and processing your CSS. [https://github.com/rails/cssbundling-rails]
-gem "cssbundling-rails", "~> 1.2"
+# Comes with installation support for bundling and processing your CSS. [https://github.com/rails/cssbundling-rails]
+gem "cssbundling-rails"
 
-# Provides installers to set up esbuild, rollup, or webpack to allow bundling. [https://github.com/rails/jsbundling-rails]
-gem "jsbundling-rails", "~> 1.1"
+# Set up esbuild, rollup, or webpack to allow bundling. [https://github.com/rails/jsbundling-rails]
+gem "jsbundling-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
