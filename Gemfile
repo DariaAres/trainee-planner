@@ -48,16 +48,16 @@ gem 'bootsnap', require: false
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-gem "image_processing", "~> 1.2"
+gem 'image_processing', '~> 1.2'
 
 # Comes with installation support for bundling and processing your CSS. [https://github.com/rails/cssbundling-rails]
-gem "cssbundling-rails"
+gem 'cssbundling-rails'
 
 # Set up esbuild, rollup, or webpack to allow bundling. [https://github.com/rails/jsbundling-rails]
-gem "jsbundling-rails"
+gem 'jsbundling-rails'
 
 # Devise is a flexible authentication solution for Rails based on Warden. [https://github.com/heartcombo/devise]
-gem "devise"
+gem 'devise'
 
 # Centralization of locale data collection for Ruby on Rails. [https://github.com/svenfuchs/rails-i18n]
 gem 'rails-i18n'
@@ -67,7 +67,7 @@ gem 'active_storage_validations'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[mri mingw x64_mingw]
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
 
   # rspec-rails is a testing framework for Rails 5+. [https://github.com/rspec/rspec-rails/tree/6-0-maintenance]
   gem 'rspec-rails'
