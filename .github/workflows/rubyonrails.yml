@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  Rubocop:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Workflow access
+        uses: actions/checkout@v3
+
+      - name: Build app
+        uses: ./.github/actions/build
+
+      - name: Run Rubocop
+        continue-on-error: true
+        run: bundle exec rubocop
+
+  RSpec:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Workflow access
+        uses: actions/checkout@v3
+
+      - name: Build app
+        uses: ./.github/actions/build
+
+      - name: Build and test with rspec
+        run: |
+          bundle exec rspec spec
+
+  Code-coverage:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Workflow access
+        uses: actions/checkout@v3
+
+      - name: Build app
+        uses: ./.github/actions/build
+
+      - name: Create Coverage Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage
+          path: ./coverage
