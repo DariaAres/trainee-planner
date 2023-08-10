@@ -39,3 +39,6 @@
 
 # Ignore .vscode and its files
 .vscode/*
+
+# Ignore code coverage files
+coverage/*
