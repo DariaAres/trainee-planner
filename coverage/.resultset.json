@@ -1,17 +1,89 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/daria/Desktop/ruby/event-planner/spec/test_helper.rb": {
+      "/home/daria/Desktop/ruby/trainee-planner/app/channels/application_cable/channel.rb": {
         "lines": [
-          1,
-          1,
           null,
-          1,
-          1,
-          null
-        ]
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/daria/Desktop/ruby/trainee-planner/app/channels/application_cable/connection.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/daria/Desktop/ruby/trainee-planner/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/daria/Desktop/ruby/trainee-planner/app/helpers/application_helper.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/daria/Desktop/ruby/trainee-planner/app/jobs/application_job.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/daria/Desktop/ruby/trainee-planner/app/mailers/application_mailer.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/daria/Desktop/ruby/trainee-planner/app/models/application_record.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1690121905
+    "timestamp": 1692598152
   }
 }
