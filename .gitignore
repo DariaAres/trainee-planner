@@ -35,7 +35,12 @@
 
 /node_modules
 # Ignore .idea and its files
-.idea/*
+/.idea/*
 
 # Ignore .vscode and its files
-.vscode/*
+/.vscode/*
+
+# Ignore code coverage files
+/coverage/*
+
+/.env

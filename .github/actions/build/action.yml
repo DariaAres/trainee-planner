@@ -1,0 +1,22 @@
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.2
+
+    - name: Install Dependencies
+      run: |
+        sudo apt install -yqq libpq-dev
+        gem install bundler
+      shell: bash
+
+    - name: Install Gems
+      run: |
+        bundle install
+      shell: bash
+
+
