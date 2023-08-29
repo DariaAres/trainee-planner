@@ -1,9 +1,15 @@
 name: CI
-
 on:
   push:
     branches:
       - '**'
+
+env:
+  MYSQL_ROOT_PASSWORD: password
+  MYSQL_ROOT_HOST: 172.18.0.1
+  MYSQL_LOG_CONSOLE: true
+  MYSQL_PASSWORD: password
+  MYSQL_ROOT_USER: root
 
 jobs:
   Rubocop:
@@ -11,16 +17,22 @@ jobs:
     steps:
       - name: Workflow access
         uses: actions/checkout@v3
-
       - name: Build app
         uses: ./.github/actions/build
-
       - name: Run Rubocop
         continue-on-error: true
         run: bundle exec rubocop
 
   RSpec:
     runs-on: ubuntu-20.04
+    services:
+      mysql:
+          image: mysql
+          env:
+            MYSQL_ROOT_PASSWORD: password
+          ports:
+            - 8888:3306
+          options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
       - name: Workflow access
         uses: actions/checkout@v3
@@ -30,17 +42,17 @@ jobs:
 
       - name: Build and test with rspec
         run: |
-          bundle exec rspec spec
-
+          sudo /etc/init.d/mysql start  --skip-grant-tables
+          bundle exec rails db:create db:migrate RAILS_ENV=test
+          bin/rails assets:precompile
+          bundle exec rspec
   Code-coverage:
     runs-on: ubuntu-20.04
     steps:
       - name: Workflow access
         uses: actions/checkout@v3
-
       - name: Build app
         uses: ./.github/actions/build
-
       - name: Create Coverage Artifact
         uses: actions/upload-artifact@v2
         with:

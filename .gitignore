@@ -42,5 +42,4 @@
 
 # Ignore code coverage files
 /coverage/*
-
 /.env
