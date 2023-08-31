@@ -1,6 +1,25 @@
 # Additional translations at https://github.com/heartcombo/devise/wiki/I18n
 
 en:
+  precondition: "Create or sign in an account"
+  hi: "Hello"
+  user:
+    sign_up: "Registration"
+    sign_out: "Sing out"
+    login: "Sing in"
+    first_name: "Sing up"
+    last_name: "Last name"
+    email: "Email"
+    password: "Password"
+    confirm_password: "Password confirmation"
+    register: "Register"
+    remember: "Remember me"
+  nav:
+    company: "Company"
+    me: "Me"
+    events: "Events"
+    categories: "Category"
+    language: "Language"
   devise:
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
