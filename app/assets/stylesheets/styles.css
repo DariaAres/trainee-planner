@@ -1,11 +1,13 @@
-h3,
-h2,
-h1,
 a,
-em,
-i,
-.h6 {
+h4 {
     color: #8945C4 !important;
+}
+
+.alert {
+    margin: 30px;
+    margin-left: 35%;
+    width: 30%;
+    margin-right: 35%;
 }
 
 .border-form {
@@ -30,6 +32,34 @@ i,
     background-color: #8945C4 !important;
     border-color: #8945C4 !important;
     width: 100%;
+}
+
+.btn-secondary {
+    background-color: #d0b1eb !important;
+    border-color: transparent;
+    height: 100%;
+    border-width: 2px;
+    width: 100%;
+    color: #8945C4 !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:visited,
+.btn-secondary:focus {
+    border-color: #ad68e9 !important;
+    color: #8945C4 !important;
+}
+
+.dropdown-item:hover {
+    background-color: #d0b1eb;
+}
+
+.dropdown {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 90%;
 }
 
 .btn-position {
@@ -57,4 +87,19 @@ i,
 .home-link {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.form-check-input:checked {
+    background-color: #8945C4 !important;
+    border-color: #8945C4 !important;
+}
+
+.btn-group {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-close {
+    margin-left: 93%;
 }
