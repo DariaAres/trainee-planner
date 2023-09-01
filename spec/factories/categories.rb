@@ -2,6 +2,18 @@
 
 FactoryBot.define do
   factory :category do
-    name { 'MyString' }
+    name { %w[Personal Work Rest].sample }
+  end
+
+  trait :personal do
+    name { 'Personal' }
+  end
+
+  trait :work do
+    name { 'Work' }
+  end
+
+  trait :rest do
+    name { 'Rest' }
   end
 end
