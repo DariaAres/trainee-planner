@@ -4,8 +4,10 @@ require 'rails_helper'
 
 RSpec.describe 'home/index.html.erb', type: :view do
   describe 'Home route path', type: :routing do
-    it 'route root path to Home#index' do
-      expect(get: '/home/index').to route_to('home#index')
+    before { render template: 'home/index' }
+
+    it 'include message to user' do
+      expect(rendered).to include('p', t('precondition'))
     end
   end
 end

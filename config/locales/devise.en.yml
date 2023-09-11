@@ -2,7 +2,7 @@
 
 en:
   precondition: "Create or sign in an account"
-  hi: "Hello"
+  greeting: "Hello"
   user:
     sign_up: "Registration"
     sign_out: "Sing out"
