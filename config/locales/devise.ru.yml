@@ -1,6 +1,6 @@
 ru:
   precondition: "Создайте или войдите в учетную запись"
-  hi: "Привет"
+  greeting: "Привет"
   user:
     sign_up: "Регистрация"
     sign_out: "Выход"

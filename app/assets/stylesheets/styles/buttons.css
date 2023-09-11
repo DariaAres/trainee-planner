@@ -1,0 +1,37 @@
+.btn-position {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-group {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-close {
+    margin-left: 93%;
+}
+
+.btn-primary {
+    background-color: #8945C4 !important;
+    border-color: #8945C4 !important;
+    width: 100%;
+}
+
+.btn-secondary {
+    background-color: #d0b1eb !important;
+    border-color: transparent;
+    height: 100%;
+    border-width: 2px;
+    width: 100%;
+    color: #8945C4 !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:visited,
+.btn-secondary:focus {
+    border-color: #ad68e9 !important;
+    color: #8945C4 !important;
+}
