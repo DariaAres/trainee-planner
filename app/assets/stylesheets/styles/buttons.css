@@ -1,0 +1,19 @@
+.btn-primary {
+    background-color: #8945C4 !important;
+    border-color: #8945C4 !important;
+    width: 100%;
+}
+
+.btn-position {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-margin-top {
+    margin-top: 20px !important;
+}
+
+.btn-danger {
+    background-color: #df14bd !important;
+    border-color: #df14bd !important;
+}
