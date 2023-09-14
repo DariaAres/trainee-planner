@@ -1,0 +1,20 @@
+<h1>Categories</h1>
+<%= link_to "Create new", "/categories/new"%>
+<br><br>
+<ul>
+  <table border="0">
+    <% @categories.each do |category| %>
+      <tr>
+        <th width="200px">
+          <h5 class="category"><%= category.name %></h5>
+        </th>
+        <th>
+          <%= link_to 'Edit', edit_category_path(category.id, locale: I18n.locale), class: "btn btn-edit" %>
+        </th>
+        <th>
+          <%= button_to 'Delete', category_path(category.id, locale: I18n.locale), method: :delete, class: "btn btn-delete"%>
+        </th>
+      </tr>
+    <% end %>
+  </table>
+</ul>
