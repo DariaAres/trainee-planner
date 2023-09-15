@@ -1,0 +1,21 @@
+.border-form {
+    height: 60vh;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 50px;
+    margin-left: 35%;
+    margin-right: 35%;
+    max-width: 450px;
+}
+
+.border {
+    background-color: #F8F9FA;
+    border: 2px solid lavender;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
