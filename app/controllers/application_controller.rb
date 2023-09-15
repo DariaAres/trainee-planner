@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   def configure_sign_up_params
     attributes = %i[first_name last_name email password password password_confirmation]
     devise_parameter_sanitizer.permit(:sign_up, keys: attributes)
+  end
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale

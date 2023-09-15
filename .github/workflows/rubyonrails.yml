@@ -49,7 +49,7 @@ jobs:
           sudo /etc/init.d/mysql start  --skip-grant-tables
           bundle exec rails db:create db:migrate RAILS_ENV=test
           bin/rails assets:precompile
-          bundle exec rspec
+          rspec spec
           
   Code-coverage:
     runs-on: ubuntu-20.04

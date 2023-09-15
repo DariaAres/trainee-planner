@@ -65,6 +65,9 @@ gem 'rails-i18n'
 # Validations for Active Storage (presence) [https://github.com/igorkasyanchuk/active_storage_validations]
 gem 'active_storage_validations'
 
+# The most popular HTML, CSS, and JavaScript framework. [https://github.com/twbs/bootstrap-rubygem]
+gem 'bootstrap'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]

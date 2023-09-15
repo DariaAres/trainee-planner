@@ -41,9 +41,9 @@ RSpec.describe 'Edit user profile' do
 
   describe 'when account is canceled' do
     before do
-      click_button 'Cancel my account'
+      click_button 'Cancel'
     end
 
-    it { expect(page).to have_current_path('/') }
+    it { expect(page).to have_current_path('/en') }
   end
 end
