@@ -2,6 +2,9 @@ h2,
 h1,
 a,
 em,
+h4,
+h6,
+.dropdown-item,
 .text {
     color: #8945C4 !important;
 }
@@ -12,4 +15,12 @@ em,
 
 .text-denger {
     color: #eb497a;
+}
+
+h3 {
+    color: #2B5035 !important;
+}
+
+.nav-item {
+    width: 110px !important;
 }

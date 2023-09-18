@@ -12,6 +12,8 @@ ru:
     confirm_password: "Подтвердите пароль"
     register: "Зарегистрироваться"
     remember: "Запомнить меня"
+  event:
+    created: "Событие успешно создано!"
   nav:
     company: "Компания"
     me: "Я"

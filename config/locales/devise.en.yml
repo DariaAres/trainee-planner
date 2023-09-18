@@ -49,6 +49,8 @@ en:
     confirm_password: "Password confirmation"
     register: "Register"
     remember: "Remember me"
+  event:
+    created: "Event has been successfully created!"
   nav:
     company: "Company"
     me: "Me"
