@@ -65,6 +65,9 @@ gem 'rails-i18n'
 # Validations for Active Storage (presence) [https://github.com/igorkasyanchuk/active_storage_validations]
 gem 'active_storage_validations'
 
+# The most popular HTML, CSS, and JavaScript framework. [https://github.com/twbs/bootstrap-rubygem]
+gem 'bootstrap'
+
 # Paginator for modern web app frameworks and ORMs. [https://github.com/kaminari/kaminari]
 gem 'kaminari'
 
