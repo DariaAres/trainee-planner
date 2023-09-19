@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
     root to: 'home#index'
+    devise_for :users, path: '', controllers: { registrations: 'users/registrations' }
   end
 end

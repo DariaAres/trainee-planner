@@ -13,7 +13,7 @@ RSpec.describe 'Sign up feature', type: :feature do
       fill_in 'Email', with: user.email
       fill_in 'Password', with: user.password
       fill_in 'Password confirmation', with: user.password
-      click_button 'Sign Up'
+      click_button 'Registration'
     end
 
     it { expect(page).to have_content('Welcome! You have signed up successfully.') }
@@ -24,7 +24,7 @@ RSpec.describe 'Sign up feature', type: :feature do
       fill_in 'Email', with: user.email
       fill_in 'Password', with: user.password
       fill_in 'Password confirmation', with: user.password
-      click_button 'Sign Up'
+      click_button 'Registration'
     end
 
     it { expect(page).to have_content("First name can't be blank") }
@@ -35,7 +35,7 @@ RSpec.describe 'Sign up feature', type: :feature do
       fill_in 'First name', with: user.first_name
       fill_in 'Password', with: user.password
       fill_in 'Password confirmation', with: user.password
-      click_button 'Sign Up'
+      click_button 'Registration'
     end
 
     it { expect(page).to have_content("Email can't be blank") }
@@ -45,7 +45,7 @@ RSpec.describe 'Sign up feature', type: :feature do
     before do
       fill_in 'First name', with: user.first_name
       fill_in 'Email', with: user.email
-      click_button 'Sign Up'
+      click_button 'Registration'
     end
 
     it { expect(page).to have_content("Password can't be blank") }
@@ -57,7 +57,7 @@ RSpec.describe 'Sign up feature', type: :feature do
       fill_in 'Email', with: user.email
       fill_in 'Password', with: user.password
       fill_in 'Password confirmation', with: 'password_confirmation'
-      click_button 'Sign Up'
+      click_button 'Registration'
     end
 
     it { expect(page).to have_content("Password confirmation doesn't match Password") }
