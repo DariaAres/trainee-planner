@@ -1,2 +1,38 @@
-<h1>Events#edit</h1>
-<p>Find me in app/views/events/edit.html.erb</p>
+<div class="border-form higher-form">
+  <div class="border">
+    <h1 class="text-center mb-4"><%= t('event.edit') %></h1>
+    <%= form_with model: @event do |f| %>
+      <%= render partial: 'events/error', locals: { event: @event, attribute: :name} %>
+      <div class="field mb-4">
+        <%= f.label :name, class: 'text' %><br/>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="field mb-4">
+        <%= f.label :description, class: 'text' %><br/>
+        <%= f.text_field :description, class: "form-control" %>
+      </div>
+      <%= render partial: 'events/error', locals: { event: @event, attribute: :date} %>
+      <div class="field mb-4">
+        <%= f.label :date, class: 'text' %><br/>
+        <%= f.datetime_field :date, class: "form-control" %>
+      </div>
+      <%= render partial: 'events/error', locals: { event: @event, attribute: :date_to_notificate} %>
+      <div class="field mb-4">
+        <%= f.label :remind, class: 'text' %><br/>
+        <%= f.datetime_field :date_to_notificate, class: "form-control" %>
+      </div>
+
+      <%= render partial: 'events/error', locals: { event: @event, attribute: :category} %>
+      <div class="field mb-4">
+      <%= f.label :category, class: 'text' %><br/>
+        <%= f.collection_select :category_id, Category.all, :id,:name,
+                                {:selected=>"", :disabled=>"" },
+                                {:class => "form-control",
+                                :placeholder => "Category select"} %>
+      </div>
+      <p>
+        <%= f.submit t('event.edit'), class: "btn btn-primary" %>
+      </p>
+    <% end %>
+  </div>
+</div>

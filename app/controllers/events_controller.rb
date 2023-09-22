@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 class EventsController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   before_action :find_event, only: %i[edit update show destroy]
 
   def index
-    @events = Event.all
+    @events = Event.all.page(params[:page]).per(20)
   end
 
   def new
@@ -16,9 +16,10 @@ class EventsController < ApplicationController
     @event = Event.create(event_params)
 
     if @event.save
-      flash[:success] = t('event.created')
-      redirect_to root_path
+      flash[:success] = 'Created'
+      redirect_to events_path
     else
+      flash[:error] = 'Not created'
       render :new, status: :unprocessable_entity
     end
   end
@@ -27,7 +28,7 @@ class EventsController < ApplicationController
 
   def update
     if @event.update(event_params)
-      redirect_to root_path
+      redirect_to events_path
     else
       render :edit, status: :unprocessable_entity
     end
@@ -38,7 +39,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
 
-    redirect_to root_path, status: :see_other
+    redirect_to events_path, status: :see_other
   end
 
   private

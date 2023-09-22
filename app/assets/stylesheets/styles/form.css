@@ -8,6 +8,10 @@
     max-width: 450px;
 }
 
+.higher-form {
+    margin-top: 10px !important;
+}
+
 .border {
     background-color: #F8F9FA;
     border: 2px solid lavender;
@@ -18,4 +22,19 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    margin-bottom: 90px;
+}
+
+.center {
+    margin: auto;
+    width: max-content;
+    padding: 10px;
+}
+
+.navbar-expand-lg {
+    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+}
+
+.fixed-bottom {
+    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
