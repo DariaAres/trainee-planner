@@ -47,4 +47,9 @@ RSpec.describe User, type: :model do
       it { expect(user).to be_valid }
     end
   end
+
+  describe 'associations' do
+    it { expect(user).to have_many(:user_categories).dependent(:destroy) }
+    it { expect(user).to have_many(:categories).through(:user_categories) }
+  end
 end
