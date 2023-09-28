@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema[7.0].define(version: 2023_09_19_072656) do
+  create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "events", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
-    t.datetime "date", null: false
+    t.datetime "event_date", null: false
     t.text "description"
     t.datetime "date_to_notificate"
     t.bigint "category_id", null: false
@@ -24,14 +30,6 @@
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_21_184530) do
-  create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-ActiveRecord::Schema[7.0].define(version: 2023_08_11_214111) do
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

@@ -31,3 +31,7 @@
 
 en:
   hello: "Hello world"
+  event:
+    date_past: "Date cannot be in the past"
+    mention_future: "Mention of events cannot be later than their date"
+    mention_past: "Mention of events cannot be in the past"
