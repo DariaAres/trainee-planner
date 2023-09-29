@@ -21,9 +21,8 @@ end
   )
 end
 
-5.times do
-  UserCategory.find_or_create_by!(
-    user: users.sample,
-    category: Category.find_or_create_by!(name: Faker::Lorem.unique.word)
-  )
+users.each do |user|
+  categories.each do |category|
+    UserCategory.create(user:, category:)
+  end
 end

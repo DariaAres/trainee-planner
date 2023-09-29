@@ -46,7 +46,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:name, :date, :description, :date_to_notificate, :category_id)
+    params.require(:event).permit(:name, :event_date, :description, :date_to_notificate, :category_id)
   end
 
   def find_event

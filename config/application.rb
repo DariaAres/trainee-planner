@@ -24,6 +24,8 @@ module TraineePlanner
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.time_zone = 'Moscow'
+    config.active_record.default_timezone = :local
 
     # Robocop autocorrection to generated .rb files with E fail level.
     config.generators.after_generate do |files|

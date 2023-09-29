@@ -4,11 +4,6 @@ class Event < ApplicationRecord
   belongs_to :category, dependent: :destroy
   belongs_to :user, dependent: :destroy
 
-  validates :name, :event_date, presence: true
-  validate :date_cannot_be_in_the_past
-  validate :mention_cannot_be_later_than_date, if: :date_to_notificate?
-  validate :mention_cannot_be_in_the_past, if: :date_to_notificate?
-
   private
 
   def date_cannot_be_in_the_past

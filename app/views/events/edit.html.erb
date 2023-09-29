@@ -14,7 +14,7 @@
       <%= render partial: 'events/error', locals: { event: @event, attribute: :date} %>
       <div class="field mb-4">
         <%= f.label :date, class: 'text' %><br/>
-        <%= f.datetime_field :date, class: "form-control" %>
+        <%= f.datetime_field :event_date, class: "form-control" %>
       </div>
       <%= render partial: 'events/error', locals: { event: @event, attribute: :date_to_notificate} %>
       <div class="field mb-4">

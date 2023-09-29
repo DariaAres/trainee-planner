@@ -10,16 +10,14 @@
             <th class="bg-transparent">#</th>
             <th class="bg-transparent"><%= t('event.name') %></th>
             <th class="bg-transparent"><%= t('event.category') %></th>
-            <th class="bg-transparent"><%= t('event.date') %></th>
-            <th class="bg-transparent"><%= t('event.date_to_notificate') %></th>
+            <th class="bg-transparent"><%= t('event.event_date') %></th>
           </tr>
           <% @events.each_with_index do |event, index| %>
             <tr onclick="location.href='<%= event_path(event.id, locale: I18n.locale) %>'">
               <td class="bg-transparent"> <%= event.id %></td>
               <td class="bg-transparent"><%= event.name %></td>
               <td class="bg-transparent"><%= event.category.name %></td>
-              <td class="bg-transparent"><%= l(event.date, format: :default) %></td>
-              <td class="bg-transparent"><%= l(event.date_to_notificate, format: :default) %></td>
+              <td class="bg-transparent"><%= l(event.event_date, format: :default) %></td>
             </tr>
           <% end %>
         </table>

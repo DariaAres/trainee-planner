@@ -14,3 +14,14 @@ en:
     date_past: "Date cannot be in the past"
     mention_future: "Mention of events cannot be later than their date"
     mention_past: "Mention of events cannot be in the past"
+  home:
+    user_events_status:
+      hello: Hello
+      events_count: You have %{in_future} events in future (%{today} today)
+    greeting:
+      app_name: Event planner
+      description:
+        This application will help you efficiently organize your time and will always tell you
+        about a business meeting, going to the dentistor a friend's birthday. You no longer need
+        to keep a lot of events in your head, because this is the work of the "Event planner".
+      sign_up: Sign up
