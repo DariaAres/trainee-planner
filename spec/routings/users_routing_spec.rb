@@ -8,10 +8,10 @@ RSpec.describe 'Users routings', type: :routing do
   end
 
   it 'path to sign in' do
-    expect(get('/users/sign_in')).to route_to(controller: 'users/sessions', action: 'new')
+    expect(get('/users/sign_in')).to route_to(controller: 'devise/sessions', action: 'new')
   end
 
   it 'path to edit' do
-    expect(get('/users/edit')).to route_to(controller: 'users/registrations', action: 'edit')
+    expect(get('/users/edit')).to route_to(controller: 'devise/registrations', action: 'edit')
   end
 end

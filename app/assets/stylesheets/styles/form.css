@@ -38,3 +38,7 @@
 .fixed-bottom {
     border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
+
+.wide-border {
+    border-right: 10px solid transperent;
+}

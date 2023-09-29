@@ -13,7 +13,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.create(event_params)
+    @event = current_user.events.build(event_params)
 
     if @event.save
       flash[:success] = 'Created'
@@ -39,13 +39,14 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
 
+    flash[:success] = t('event.event_deleted')
     redirect_to events_path, status: :see_other
   end
 
   private
 
   def event_params
-    params.require(:event).permit(:name, :date, :description, :date_to_notificate, :category_id, :user_id)
+    params.require(:event).permit(:name, :date, :description, :date_to_notificate, :category_id)
   end
 
   def find_event

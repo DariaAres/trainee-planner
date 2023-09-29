@@ -25,12 +25,12 @@
       <%= render partial: 'events/error', locals: { event: @event, attribute: :category} %>
       <div class="field mb-4">
       <%= f.label :category, class: 'text' %><br/>
-        <%= f.collection_select :category_id, Category.all, :id,:name,
+        <%= f.collection_select :category_id, Category.all, :id, :name,
                                 {:prompt=> "Category", :selected=>"", :disabled=>"" },
                                 {:class => "form-control"} %>
       </div>
       <p>
-        <%= f.submit t('event.create'), class: "btn btn-primary" %>
+        <%= f.submit t('event.create'), method: :post, class: "btn btn-primary" %>
       </p>
     <% end %>
   </div>

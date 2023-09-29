@@ -1,20 +1,20 @@
-<div class="container">
-  <div class="row ">
+<div class="higher-form">
+  <div class="border">
     <div class="col-sm-6 p-4">
       <h2><%= @event.name %></h2>
       <table>
         <p class="me-auto text">
-          <tr class="">
-            <td><%= t('event.date') %>:</td>
+          <tr>
+            <td class="wide-border"><%= t('event.date') %>:</td>
             <td><%= @event.date.strftime("%Y-%m-%d %H:%M:%S") %></td>
           </tr>
           <tr>
-            <td><%= t('event.category') %>: </td>
+            <td class="wide-border"><%= t('event.category') %>: </td>
             <td><%= @event.category.name %></td>
           </tr>
           <% if @event.date_to_notificate%>
             <tr>
-              <td><%= t('event.remind') %>: </td>
+              <td class="wide-border"><%= t('event.remind') %>: </td>
               <td><%= @event.date_to_notificate.strftime("%Y-%m-%d %H:%M:%S") %></td>
             </tr>
           <% end %>

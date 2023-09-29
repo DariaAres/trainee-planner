@@ -20,5 +20,5 @@ RSpec.describe 'users/registrations/new.html.erb' do
   it { expect(rendered).to have_xpath "//input[contains(@id, 'user_email')]" }
   it { expect(rendered).to have_xpath "//input[contains(@id, 'user_password')]" }
   it { expect(rendered).to have_xpath "//input[contains(@id, 'user_password_confirmation')]" }
-  it { expect(rendered).to have_button 'Sign Up' }
+  it { expect(rendered).to have_button 'Registration' }
 end
