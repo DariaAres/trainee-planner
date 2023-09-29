@@ -39,4 +39,9 @@ RSpec.describe 'Category', type: :model do
       it { expect(category.name).to eql 'Rest' }
     end
   end
+
+  describe 'associations' do
+    it { expect(category).to have_many(:user_categories).dependent(:destroy) }
+    it { expect(category).to have_many(:users).through(:user_categories) }
+  end
 end
