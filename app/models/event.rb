@@ -4,23 +4,28 @@ class Event < ApplicationRecord
   belongs_to :category, dependent: :destroy
   belongs_to :user, dependent: :destroy
 
-  validates :name, :date, presence: true
-  validate :valid_date
-  validate :valid_date_to_notificate, if: :date_present?
+  validates :name, :event_date, presence: true
+  validate :date_cannot_be_in_the_past
+  validate :mention_cannot_be_later_than_date, if: :date_to_notificate?
+  validate :mention_cannot_be_in_the_past, if: :date_to_notificate?
 
-  def valid_date
-    return if date.blank? || date.future?
+  private
 
-    errors.add(:date, 'Date cannot be in the past')
+  def date_cannot_be_in_the_past
+    return if event_date.blank? || event_date.future?
+
+    errors.add(:event_date, I18n.t('event.date_past'))
   end
 
-  def valid_date_to_notificate
-    return if date_to_notificate.future? && (date_to_notificate < date)
+  def mention_cannot_be_later_than_date
+    return if date_to_notificate < event_date
 
-    errors.add(:date_to_notificate, 'Mention of events cannot be later than their date')
+    errors.add(:date_to_notificate, I18n.t('event.mention_future'))
   end
 
-  def date_present?
-    date_to_notificate.present?
+  def mention_cannot_be_in_the_past
+    return if date_to_notificate.future?
+
+    errors.add(:date_to_notificate, I18n.t('event.mention_past'))
   end
 end
