@@ -1,3 +1,4 @@
+
 .btn-primary {
     background-color: #8945C4;
     border-color: #8945C4 !important;
@@ -51,4 +52,34 @@
 .btn-secondary {
     background-color: #8945C4;
     color: white !important;
+
+.btn-danger {
+    background-color: #eb497a !important;
+    border-color: #eb497a !important;
+    width: 100%;
+}
+
+.btn-group {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-close {
+    margin-left: 93%;
+}
+
+.btn-secondary {
+    background-color: #d0b1eb !important;
+    border-color: transparent;
+    height: 100%;
+    border-width: 2px;
+    width: 100%;
+    color: #8945C4 !important;
+}
+
+.btn-secondary:visited,
+.btn-secondary:focus {
+    border-color: #ad68e9 !important;
+    color: #8945C4 !important;
 }

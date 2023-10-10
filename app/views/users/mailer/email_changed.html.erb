@@ -1,0 +1,7 @@
+<p><%= t('user.greeting_second') %> <%= @email %>!</p>
+
+<% if @resource.try(:unconfirmed_email?) %>
+  <p<%= t('user.change_email_info') %> <%= @resource.unconfirmed_email %>.</p>
+<% else %>
+  <p><%= t('user.change_email_info') %> <%= @resource.email %>.</p>
+<% end %>
