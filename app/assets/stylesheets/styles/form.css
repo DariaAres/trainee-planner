@@ -19,3 +19,12 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+
+.list-group {
+    max-width: 40%;
+}
+
+.list-categories {
+    width: 65%;
+    margin-left: 35%;
+}

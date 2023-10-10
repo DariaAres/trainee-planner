@@ -1,13 +1,14 @@
-<%= form_with model: @category do |form| %>
-  <div>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
+<%= form_with model: category do |form| %>
+  <div class="field">
+    <%= form.label :name, t('category.name'), class: 'text' %><br>
+    <%= form.text_field :name, class: 'form-control' %>
     <% @category.errors.full_messages_for(:name).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
-
-  <div>
-    <%= form.submit %>
+  <br>
+  <div class="actions" align="center">
+    <%= form.submit t("category.#{button}"), class: 'btn btn-primary' %>
   </div>
+  <br>
 <% end %>

@@ -1,3 +1,7 @@
-<h1>Edit Category</h1>
+<div class="row align-items-center border-form">
+  <div class="border">
+    <h1><%= t('category.edit_c') %></h1>
 
-<%= render "form", category: @category %>
+    <%= render partial: 'categories/form', locals: { category: @category , button: 'edit'} %>
+  </div>
+</div>

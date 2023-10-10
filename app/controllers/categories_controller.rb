@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class CategoriesController < ApplicationController
+  #before_action :authenticate_user!
+  before_action :find_category, only: %i[edit update destroy]
+
   def index
     @categories = Category.all
   end
@@ -13,37 +16,38 @@ class CategoriesController < ApplicationController
     @category = Category.create(category_params)
 
     if @category.save
-      flash[:success] = 'Category Has Been successfully Created'
-      redirect_to root_path
+      flash[:success] = t('category.category_created')
+      redirect_to categories_path
     else
       render :new, status: :unprocessable_entity
     end
   end
 
-  def edit
-    @category = Category.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @category = Category.find(params[:id])
-
     if @category.update(category_params)
-      redirect_to root_path
+      flash[:success] = t('category.category_updated')
+      redirect_to categories_path
     else
       render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @category = Category.find(params[:id])
     @category.destroy
 
-    redirect_to root_path, status: :see_other
+    flash[:success] = t('category.category_deleted')
+    redirect_to categories_path, status: :see_other
   end
 
   private
 
   def category_params
     params.require(:category).permit(:name)
+  end
+
+  def find_category
+    @category = Category.find(params[:id])
   end
 end

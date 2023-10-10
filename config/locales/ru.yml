@@ -1,0 +1,13 @@
+ru:
+  category:
+    name: "Имя"
+    create: "Создать"
+    new_c: "Новая категория"
+    edit_c: "Изменеие категории"
+    categories: "Категории"
+    edit: "Изменить"
+    delete: "Удалить"
+    category_created: "Категория успешно создана"
+    create_new: "Создать новую"
+    category_deleted: "Категория успешно удалениа"
+    category_updated: "Категория успешно обнавлена"

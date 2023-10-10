@@ -31,3 +31,15 @@
 
 en:
   hello: "Hello world"
+  category:
+    name: "Name"
+    create: "Create"
+    new_c: "New category"
+    edit_c: "Edit category"
+    categories: "Categories"
+    edit: "Edit"
+    delete: "Delete"
+    category_created: "Category has been successfully created"
+    create_new: "Create new"
+    category_deleted: "Category has been deleted successfully"
+    category_updated: "Category has been updated successfully"
