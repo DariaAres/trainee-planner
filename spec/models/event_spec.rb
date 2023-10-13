@@ -66,8 +66,8 @@ RSpec.describe Event, type: :model do
   end
 
   describe 'associations' do
-    it { expect(event).to belong_to(:user).dependent(:destroy) }
-    it { expect(event).to belong_to(:category).dependent(:destroy) }
+    it { expect(event).to belong_to(:user) }
+    it { expect(event).to belong_to(:category) }
   end
 
   describe 'traits' do

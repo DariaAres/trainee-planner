@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
 class Event < ApplicationRecord
-  belongs_to :category, dependent: :destroy
-  belongs_to :user, dependent: :destroy
+  belongs_to :category
+  belongs_to :user
 
   validates :name, :event_date, presence: true
   validate :date_cannot_be_in_the_past
   validate :mention_cannot_be_later_than_date, if: :date_to_notificate?
   validate :mention_cannot_be_in_the_past, if: :date_to_notificate?
+
+  paginates_per 20
 
   private
 

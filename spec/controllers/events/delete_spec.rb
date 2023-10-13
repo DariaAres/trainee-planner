@@ -20,7 +20,7 @@ RSpec.describe EventsController, type: :controller do
       end
 
       it 'redirect to sign in page' do
-        expect(response).to redirect_to('/users/sign_in')
+        expect(response).to redirect_to('/sign_in')
       end
 
       it 'delete category in the database' do
@@ -35,7 +35,7 @@ RSpec.describe EventsController, type: :controller do
 
       it 'sets a flash notice message' do
         delete_event
-        expect(flash[:success]).to match('Event has been successfully deleted')
+        expect(flash[:notice]).to match('Event has been successfully deleted')
       end
 
       it 'delete category in the database' do

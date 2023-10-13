@@ -20,7 +20,7 @@ RSpec.describe EventsController, type: :controller do
 
       it 'redirect to sign in page' do
         edit_event
-        expect(response).to redirect_to('/users/sign_in')
+        expect(response).to redirect_to('/sign_in')
       end
     end
 

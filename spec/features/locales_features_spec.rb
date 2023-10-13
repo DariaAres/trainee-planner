@@ -12,7 +12,7 @@ RSpec.describe 'Locales', type: :feature do
         click_link 'Русский'
       end
 
-      it { expect(page).to have_xpath "//p[contains(text(), 'Create or sign in an account')]" }
+      it { expect(page).to have_xpath "//p[contains(text(), 'Создайте или войдите в учетную запись')]" }
     end
 
     describe 'Switch language to en' do

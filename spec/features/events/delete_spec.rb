@@ -5,6 +5,8 @@ require 'rails_helper'
 RSpec.describe 'Events#delete', type: :feature do
   describe 'delete event' do
     let(:user) { create(:user) }
+    let!(:category) { create(:category) }
+    let(:event) { build(:event) }
 
     describe 'when user is authenticated' do
       before do
@@ -14,7 +16,7 @@ RSpec.describe 'Events#delete', type: :feature do
         click_button 'Delete'
       end
 
-      it { expect(page).to have_content('Event successfully deleted') }
+      it { expect(page).to have_content('Event has been successfully deleted') }
     end
 
     describe 'when user is not authenticated' do
@@ -23,7 +25,7 @@ RSpec.describe 'Events#delete', type: :feature do
         visit event_path(Event.first.id, locale: I18n.locale)
       end
 
-      it { expect(page).to have_no_content('Event successfully deleted') }
+      it { expect(page).to have_no_content('Event has been successfully deleted') }
     end
   end
 end

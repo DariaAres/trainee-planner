@@ -1,6 +1,7 @@
 en:
   hello: "Hello world"
   event:
+    events: "Events"
     edit: "Edit"
     no_events: "No events"
     create_new: "Create new"
@@ -14,3 +15,22 @@ en:
     date_past: "Date cannot be in the past"
     mention_future: "Mention of events cannot be later than their date"
     mention_past: "Mention of events cannot be in the past"
+    event_not_deleted: "Event was not deleted"
+    event_created: "Event has been successfully created"
+    event_not_created: "Event hasn't been successfully created"
+    event_updated: "Event has been successfully updated"
+    event_not_updated: "Event hasn't been successfully updated"
+    foreign_category: "This is a foreign category"
+    name_is_blank: "Name can't be blank"
+    date_is_blank: "Event date can't be blank"
+  home:
+    user_events_status:
+      hello: Hello
+      events_count: You have %{in_future} events in future (%{today} today)
+    greeting:
+      app_name: Event planner
+      description:
+        This application will help you efficiently organize your time and will always tell you
+        about a business meeting, going to the dentistor a friend's birthday. You no longer need
+        to keep a lot of events in your head, because this is the work of the "Event planner".
+      sign_up: Sign up

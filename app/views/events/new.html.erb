@@ -1,37 +1,6 @@
 <div class="border-form higher-form">
   <div class="border">
     <h1 class="text-center mb-4"><%= t('event.create') %></h1>
-    <%= form_with model: @event do |f| %>
-      <%= render partial: 'events/error', locals: { event: @event, attribute: :name} %>
-      <div class="field mb-4">
-        <%= f.label :name, class: 'text' %><br/>
-        <%= f.text_field :name, class: "form-control" %>
-      </div>
-      <div class="field mb-4">
-        <%= f.label :description, class: 'text' %><br/>
-        <%= f.text_field :description, class: "form-control" %>
-      </div>
-      <%= render partial: 'events/error', locals: { event: @event, attribute: :date} %>
-      <div class="field mb-4">
-        <%= f.label :date, class: 'text' %><br/>
-        <%= f.datetime_field :date, class: "form-control" %>
-      </div>
-      <%= render partial: 'events/error', locals: { event: @event, attribute: :date_to_notificate} %>
-      <div class="field mb-4">
-        <%= f.label :remind, class: 'text' %><br/>
-        <%= f.datetime_field :date_to_notificate, class: "form-control" %>
-      </div>
-
-      <%= render partial: 'events/error', locals: { event: @event, attribute: :category} %>
-      <div class="field mb-4">
-      <%= f.label :category, class: 'text' %><br/>
-        <%= f.collection_select :category_id, Category.all, :id, :name,
-                                {:prompt=> "Category", :selected=>"", :disabled=>"" },
-                                {:class => "form-control"} %>
-      </div>
-      <p>
-        <%= f.submit t('event.create'), method: :post, class: "btn btn-primary" %>
-      </p>
-    <% end %>
+    <%= render partial: 'events/form', locals: { event: @event, button: 'create'} %>
   </div>
 </div>
