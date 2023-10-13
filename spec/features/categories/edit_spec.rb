@@ -15,7 +15,7 @@ RSpec.describe 'Category edit', type: :feature do
         click_button 'Edit'
       end
 
-      it { expect(page).to have_content('Category has been updated successfully') }
+      it { expect(page).to have_content(I18n.t('category.category_updated')) }
     end
 
     describe 'name of category has already exist' do
@@ -26,7 +26,7 @@ RSpec.describe 'Category edit', type: :feature do
         click_button 'Edit'
       end
 
-      it { expect(page).to have_content('Name can\'t be blank') }
+      it { expect(page).to have_content(I18n.t('category.name_not_blank')) }
     end
 
     describe 'when user is not authenticated' do
@@ -35,7 +35,7 @@ RSpec.describe 'Category edit', type: :feature do
         visit edit_category_path(category.id, locale: I18n.locale)
       end
 
-      it { expect(page).to have_no_content('Category has been updated successfully') }
+      it { expect(page).to have_no_content(I18n.t('category.category_updated')) }
     end
   end
 end

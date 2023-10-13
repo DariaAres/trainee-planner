@@ -11,6 +11,11 @@ ru:
     create_new: "Создать новую"
     category_deleted: "Категория успешно удалениа"
     category_updated: "Категория успешно обнавлена"
+    category_not_deleted: "Категория не удалена"
+    name_has_taken: "Название уже используется"
+    name_not_blank: "Название не может отсутствовать"
+    category_not_updated: "Категория не обновлена"
+    category_not_created: "Категория не создана"
   event:
     date_past: "Дата не может быть в прошлом"
     mention_future: "Напоминание события не может быть позже его даты"

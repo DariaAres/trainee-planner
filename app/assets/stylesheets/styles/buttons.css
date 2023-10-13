@@ -1,4 +1,3 @@
-
 .btn-primary {
     background-color: #8945C4;
     border-color: #8945C4 !important;
@@ -50,8 +49,20 @@
 }
 
 .btn-secondary {
-    background-color: #8945C4;
-    color: white !important;
+    border-width: 2px;
+    width: 100%;
+    color: #8945C4 !important;
+    margin-right: 10px;
+    background-color: #d0b1eb !important;
+    border-color: transparent;
+    height: 100%;
+    border-width: 2px;
+    color: #8945C4 !important;
+}
+
+.btn-short-width {
+    width: auto;
+}
 
 .btn-danger {
     background-color: #eb497a !important;
@@ -69,17 +80,12 @@
     margin-left: 93%;
 }
 
-.btn-secondary {
-    background-color: #d0b1eb !important;
-    border-color: transparent;
-    height: 100%;
-    border-width: 2px;
-    width: 100%;
-    color: #8945C4 !important;
-}
-
 .btn-secondary:visited,
 .btn-secondary:focus {
     border-color: #ad68e9 !important;
     color: #8945C4 !important;
+}
+
+.btn-success {
+    margin-top: 10px !important;
 }

@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 class CategoriesController < ApplicationController
-  #before_action :authenticate_user!
+  before_action :authenticate_user!
   before_action :find_category, only: %i[edit update destroy]
 
   def index
-    @categories = Category.all
+    @categories = current_user.categories.all.page(params[:page]).per(params[:per_page]).order('name')
   end
 
   def new
@@ -13,13 +13,12 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.create(category_params)
+    @category = current_user.categories.create(category_params)
 
-    if @category.save
-      flash[:success] = t('category.category_created')
-      redirect_to categories_path
+    if Category.all.exists?(@category.id)
+      redirect_to categories_path, notice: t('category.category_created')
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity, notice: t('category.category_not_created')
     end
   end
 
@@ -27,18 +26,18 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update(category_params)
-      flash[:success] = t('category.category_updated')
-      redirect_to categories_path
+      redirect_to categories_path, notice: t('category.category_updated')
     else
-      render :edit, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity, notice: t('category.category_not_updated')
     end
   end
 
   def destroy
-    @category.destroy
-
-    flash[:success] = t('category.category_deleted')
-    redirect_to categories_path, status: :see_other
+    if @category.destroy
+      redirect_to categories_path, status: :see_other, notice: t('category.category_deleted')
+    else
+      redirect_to categories_path, status: :see_other, notice: t('category.category_not_deleted')
+    end
   end
 
   private

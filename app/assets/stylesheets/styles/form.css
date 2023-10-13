@@ -28,3 +28,9 @@
     width: 65%;
     margin-left: 35%;
 }
+
+.center {
+    margin: auto;
+    width: max-content;
+    padding: 10px;
+}

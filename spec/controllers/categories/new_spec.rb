@@ -35,7 +35,7 @@ RSpec.describe CategoriesController, type: :controller do
       end
 
       it 'set a flash message' do
-        expect(flash[:success]).to eq('Category has been successfully created')
+        expect(flash[:notice]).to eq(I18n.t('category.category_created'))
       end
     end
 

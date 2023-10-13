@@ -15,7 +15,7 @@ RSpec.describe 'Category create', type: :feature do
       click_button 'Create'
     end
 
-    it { expect(page).to have_content('Category has been successfully created') }
+    it { expect(page).to have_content(I18n.t('category.category_created')) }
     it { expect(page).to have_content('Work') }
   end
 
@@ -30,6 +30,6 @@ RSpec.describe 'Category create', type: :feature do
       click_button 'Create'
     end
 
-    it { expect(page).to have_content('Name has already been taken') }
+    it { expect(page).to have_content(I18n.t('category.name_has_taken')) }
   end
 end

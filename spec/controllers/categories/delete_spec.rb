@@ -34,7 +34,7 @@ RSpec.describe CategoriesController, type: :controller do
 
       it 'sets a flash notice message' do
         delete_category
-        expect(flash[:success]).to match('Category has been deleted successfully')
+        expect(flash[:notice]).to match(I18n.t('category.category_deleted'))
       end
 
       it 'delete category in the database' do
