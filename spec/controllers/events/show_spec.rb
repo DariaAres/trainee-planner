@@ -37,7 +37,7 @@ RSpec.describe EventsController, type: :controller do
       end
 
       it 'redirect to sign in page' do
-        expect(response).to redirect_to(new_user_session_path)
+        expect(response).to redirect_to('/sign_in')
       end
     end
   end

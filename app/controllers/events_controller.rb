@@ -3,9 +3,10 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_event, only: %i[edit update show destroy]
+  before_action :set_category, only: %i[update]
 
   def index
-    @events = Event.all.page(params[:page]).per(20)
+    @events = current_user.events.all.page(params[:page]).per(params[:per_page]).order('event_date')
   end
 
   def new
@@ -16,40 +17,48 @@ class EventsController < ApplicationController
     @event = current_user.events.build(event_params)
 
     if @event.save
-      flash[:success] = 'Created'
-      redirect_to events_path
+      redirect_to events_path, notice: t('event.event_created')
     else
-      flash[:error] = 'Not created'
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity, error: t('event.event_not_created')
     end
   end
 
   def edit; end
 
   def update
+    unless @category
+      return redirect_to events_path, error: t('event.foreign_category'),
+                                      status: :unprocessable_entity
+    end
+
     if @event.update(event_params)
-      redirect_to events_path
+      redirect_to event_path(@event), notice: t('event.event_updated')
     else
-      render :edit, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity, error: t('event.event_not_updated')
     end
   end
 
   def show; end
 
   def destroy
-    @event.destroy
-
-    flash[:success] = t('event.event_deleted')
-    redirect_to events_path, status: :see_other
+    if @event.destroy
+      redirect_to events_path, notice: t('event.event_deleted')
+    else
+      redirect_to events_path, error: t('event.event_not_deleted')
+    end
   end
 
   private
 
   def event_params
-    params.require(:event).permit(:name, :date, :description, :date_to_notificate, :category_id)
+    params.require(:event).permit(:name, :event_date, :description, :date_to_notificate, :category_id)
   end
 
   def find_event
-    @event = Event.find(params[:id])
+    @event = Event.all.find(params[:id])
+  end
+
+  def set_category
+    @category = current_user.categories.find_by(id: event_params[:category_id])
   end
 end
