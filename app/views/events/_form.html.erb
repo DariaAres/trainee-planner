@@ -1,32 +1,39 @@
 <%= form_with model: @event do |f| %>
-  <%= render partial: 'events/error', locals: { event: event, attribute: :name} %>
-  <div class="field mb-4">
-    <%= f.label :name, class: 'text' %><br/>
+
+  <div class="field">
+    <%= f.label :name, t('event.name'), class: 'text' %>
     <%= f.text_field :name, class: "form-control" %>
   </div>
-  <div class="field mb-4">
-    <%= f.label :description, class: 'text' %><br/>
+  <%= render partial: 'events/error', locals: { event: event, attribute: :name} %>
+
+  <div class="field">
+    <%= f.label :description, t('event.description'), class: 'text' %>
     <%= f.text_field :description, class: "form-control" %>
   </div>
   <%= render partial: 'events/error', locals: { event: event, attribute: :event_date} %>
-  <div class="field mb-4">
-    <%= f.label :event_date, class: 'text' %><br/>
+
+  <div class="field">
+    <%= f.label :event_date, t('event.date'), class: 'text' %>
     <%= f.datetime_field :event_date, class: "form-control" %>
   </div>
-  <%= render partial: 'events/error', locals: { event: event, attribute: :date_to_notificate} %>
-  <div class="field mb-4">
-  <%= f.label :date_to_notificate, class: 'text' %><br/>
+  <%= render partial: 'events/error', locals: { event: event, attribute: :event_date} %>
+
+  <div class="field">
+  <%= f.label :date_to_notificate, t('event.date_to_notificate'), class: 'text' %>
     <%= f.datetime_field :date_to_notificate, class: "form-control" %>
   </div>
+  <%= render partial: 'events/error', locals: { event: event, attribute: :date_to_notificate} %>
 
-  <%= render partial: 'events/error', locals: { event: event, attribute: :category} %>
-  <div class="field mb-4">
-  <%= f.label :category, class: 'text' %><br/>
+  <div class="field">
+  <%= f.label :category, t('event.category'), class: 'text' %>
     <%= f.collection_select :category_id, current_user.categories.all, :id,:name,
                             { promp: "Category", selected: "", disabled: "" },
                             { class: "form-control", placeholder: "Select category"} %>
   </div>
+  <%= render partial: 'events/error', locals: { event: event, attribute: :category} %>
+
   <p>
     <%= f.submit t("event.#{button}"), class: "btn btn-primary" %>
   </p>
+  </div>
 <% end %>

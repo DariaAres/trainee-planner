@@ -7,6 +7,7 @@ ru:
     category: "Категория"
     date: "Дата"
     date_to_notificate: "Напомнить"
+    description: "Описание"
     events: "События"
     no_events: "Событий нет"
     create_new: "Создать новое"

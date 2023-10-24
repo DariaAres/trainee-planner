@@ -2,10 +2,10 @@
   <div class="border index-events">
     <h1 class="text-center mb-4"><%= t('event.events')%> </h1>
     <div class="container mb-4">
+      <%= render partial: 'events/search' %>
       <% if @events.empty? %>
         <h2 class="text-center p-4"><%= t('event.no_events') %></h2>
       <%else%>
-      <%= render partial: 'events/search' %>
       <%= link_to "5", events_path(per_page: 5, search: params[:search]), class: "btn btn-secondary btn-short-width"%>
       <%= link_to "10", events_path(per_page: 10, search: params[:search]), class: "btn btn-secondary btn-short-width"%>
       <%= link_to "20", events_path(per_page: 20, search: params[:search]), class: "btn btn-secondary btn-short-width"%>

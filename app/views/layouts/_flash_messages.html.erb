@@ -1,5 +1,5 @@
 <% flash.each do |type, msg| %>
-  <div class="alert <%= flash_style(type) %> alert-dismissible fade show text-center max-width" role="alert">
+  <div class="fixed-bottom flash-alert alert <%= flash_style(type) %> alert-dismissible" role="alert">
     <%= msg %>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
