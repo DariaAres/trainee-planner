@@ -4,16 +4,13 @@
 
   <ul class="list-group list-group-flush" >
   <div class='center'>
-    <%= link_to "5", categories_path(per_page: 5, search: params[:search]), class: "btn btn-secondary btn-short-width"%>
-    <%= link_to "10", categories_path(per_page: 10, search: params[:search]), class: "btn btn-secondary btn-short-width"%>
-    <%= link_to "30", categories_path(per_page: 30, search: params[:search]), class: "btn btn-secondary btn-short-width"%>
-    <%= link_to "40", categories_path(per_page: 40, search: params[:search]), class: "btn btn-secondary btn-short-width"%>
+    <%= render partial: 'categories/selection_of_pagination' %>
   </div>
     <% @categories.each do |category| %>
       <li class="list-group-item">
         <table>
           <tr >
-            <th width="450px">
+            <th class="category-list">
               <h5 class="category"><%= category.name %></h5>
             </th>
             <th>
