@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   before_action :set_category, only: %i[update]
 
   def index
-    @events = current_user.events.all.page(params[:page]).per(params[:per_page]).order('event_date')
+    @events = current_user.events.all.page(params[:page]).per(params[:per_page]).order(:event_date)
   end
 
   def new
