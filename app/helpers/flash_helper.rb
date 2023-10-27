@@ -11,6 +11,6 @@ module FlashHelper
   }.freeze
 
   def flash_style(type)
-    STYLES[type]
+    STYLES[type.to_sym]
   end
 end

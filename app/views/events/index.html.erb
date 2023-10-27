@@ -2,6 +2,7 @@
   <div class="border index-events">
     <h1 class="text-center mb-4"><%= t('event.events') %> </h1>
     <div class="container mb-4">
+      <%= render partial: 'events/search' %>
       <% if @events.empty? %>
         <h2 class="text-center p-4"><%= t('event.no_events') %></h2>
       <% else %>
