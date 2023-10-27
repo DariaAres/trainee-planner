@@ -63,13 +63,13 @@
     height: 53px;
     text-align: center;
     padding: 15px;
-    top: 600px;
-    left: 507px;
+    top: 700px;
+    left: 557px;
     position: fixed;
     bottom: 0;
     margin: auto;
     border-radius: 10px 10px 0px 10px;
-
+}
 
 .list-group {
     max-width: 40%;
