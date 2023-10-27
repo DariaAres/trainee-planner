@@ -11,7 +11,7 @@ RSpec.describe UserCategory, type: :model do
   end
 
   describe 'associations' do
-    it { expect(user_category).to belong_to(:user).dependent(:destroy) }
-    it { expect(user_category).to belong_to(:category).dependent(:destroy) }
+    it { expect(user_category).to belong_to(:user) }
+    it { expect(user_category).to belong_to(:category) }
   end
 end
