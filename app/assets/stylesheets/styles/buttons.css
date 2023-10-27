@@ -1,3 +1,16 @@
+.btn-primary {
+    background-color: #8945C4;
+    border-color: #8945C4 !important;
+    width: 100%;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    border-color: #ad68e9;
+    color: #8945C4 !important;
+    background-color: transparent;
+}
+
 .btn-position {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -5,6 +18,50 @@
 
 .btn-margin-top {
     margin-top: 20px !important;
+}
+
+.btn-success:hover,
+.btn-success:active {
+    background-color: transparent !important;
+    border-color: #ad68e9 !important;
+    color: #8945C4 !important;
+}
+
+.btn-danger:hover,
+.btn-danger:active {
+    background-color: transparent !important;
+    border-color: #ad68e9 !important;
+    color: #8945C4 !important;
+}
+
+.btn-info:hover,
+.btn-info:active {
+    background-color: transparent !important;
+    border-color: #ad68e9 !important;
+    color: #8945C4 !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+    border-color: #ad68e9;
+    color: #8945C4 !important;
+    background-color: transparent;
+}
+
+.btn-secondary {
+    border-width: 2px;
+    width: 100%;
+    color: #8945C4 !important;
+    margin-right: 10px;
+    background-color: #d0b1eb !important;
+    border-color: transparent;
+    height: 100%;
+    border-width: 2px;
+    color: #8945C4 !important;
+}
+
+.btn-short-width {
+    width: auto;
 }
 
 .btn-danger {
@@ -23,25 +80,12 @@
     margin-left: 93%;
 }
 
-.btn-primary {
-    background-color: #8945C4 !important;
-    border-color: #8945C4 !important;
-    width: 100%;
-}
-
-.btn-secondary {
-    background-color: #d0b1eb !important;
-    border-color: transparent;
-    height: 100%;
-    border-width: 2px;
-    width: 100%;
-    color: #8945C4 !important;
-}
-
-.btn-secondary:hover,
-.btn-secondary:active,
 .btn-secondary:visited,
 .btn-secondary:focus {
     border-color: #ad68e9 !important;
     color: #8945C4 !important;
+}
+
+.btn-success {
+    margin-top: 10px !important;
 }

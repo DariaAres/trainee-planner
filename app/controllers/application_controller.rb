@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  before_action :set_locale, :configure_sign_up_params, only: [:create], if: :devise_controller?
+  before_action :set_locale
+  before_action :configure_sign_up_params, only: [:create], if: :devise_controller?
 
   protected
 

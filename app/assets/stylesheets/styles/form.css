@@ -19,3 +19,22 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+
+.list-group {
+    max-width: 40%;
+}
+
+.list-categories {
+    width: 65%;
+    margin-left: 35%;
+}
+
+.center {
+    margin: auto;
+    width: max-content;
+    padding: 10px;
+}
+
+.category-list {
+    width: 600px;
+}

@@ -2,7 +2,10 @@ h2,
 h1,
 a,
 em,
-.text {
+h4,
+h6,
+.text,
+.dropdown-item {
     color: #8945C4 !important;
 }
 
@@ -12,4 +15,28 @@ em,
 
 .text-denger {
     color: #eb497a;
+}
+
+.category {
+    color: #8945C4 !important;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1.5;
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height);
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.text-center-70 {
+    margin-left: 80px;
+}
+
+h3 {
+    color: #2B5035 !important;
 }

@@ -31,6 +31,23 @@
 
 en:
   hello: "Hello world"
+  category:
+    name: "Name"
+    create: "Create"
+    new_c: "New category"
+    edit_c: "Edit category"
+    categories: "Categories"
+    edit: "Edit"
+    delete: "Delete"
+    category_created: "Category has been successfully created"
+    create_new: "Create new"
+    category_deleted: "Category has been deleted successfully"
+    category_updated: "Category has been updated successfully"
+    category_not_deleted: "Category hasn't been deleted successfully"
+    category_not_updated: "Category hasn't been updated successfully"
+    category_not_created: "Category hasn't been successfully created"
+    name_has_taken: "Name has already been taken"
+    name_not_blank: "Name can't be blank"
   event:
     date_past: "Date cannot be in the past"
     mention_future: "Mention of events cannot be later than their date"

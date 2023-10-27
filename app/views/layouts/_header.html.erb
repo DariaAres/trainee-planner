@@ -4,7 +4,7 @@
     <%= link_to "Trainee Planner", "/", class: "navbar-brand home-link text" %>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <%= link_to "Link", "/", class: 'nav-link text' %>
+          <%= link_to t('category.categories'), categories_path, class: "btn btn-secondary" %>
           <%= render partial: 'layouts/locals' %>
       </ul> 
     </div>
