@@ -1,0 +1,20 @@
+<div class="container p-4">
+  <%= form_with url: events_path, method: :get do |f| %>
+    <div class="row mb-4">
+      <div class="col-sm-3">
+        <%= f.text_field :name, class: "form-control", placeholder: t('event.name') %>
+      </div>
+      <div class=" col-sm-2">
+        <%= f.collection_select :category_id,
+                                current_user.categories,
+                                :id,
+                                :name,
+                                { prompt: t('event.category') },
+                                { class: "form-control", placeholder: t('event.select') } %>
+      </div>
+      <div class="col-sm-2">
+        <%= f.submit t('event.search'), class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -18,5 +18,6 @@ RSpec.describe 'events/index', type: :view do
   describe 'when more than 20 events' do
     it { expect(rendered).to have_content(t('event.events')) }
     it { expect(rendered).to have_xpath '//a[contains(text(), page-link)]' }
+    it { expect(rendered).to have_xpath '//input[contains(@id, name)]' }
   end
 end

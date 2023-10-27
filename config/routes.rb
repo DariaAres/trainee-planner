@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get '/categories/new', to: 'categories#new'
     get '/categories/:id', to: 'categories#edit'
     resources :categories
-    
+
     devise_for :users, path: '', controllers: { registrations: 'users/registrations' }
   end
 end

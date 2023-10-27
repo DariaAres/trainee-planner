@@ -83,4 +83,25 @@ RSpec.describe Event, type: :model do
       it { expect(event.date_to_notificate).to eql(event.event_date - 1.minute) }
     end
   end
+
+  describe 'scopes' do
+    let(:user) { create(:user) }
+    let!(:category_work) { build(:category, :work) }
+    let!(:category_rest) { build(:category, :rest) }
+
+    let!(:event_one) { create(:event, user:, category: category_work, name: 'One') }
+    let!(:event_two) { create(:event, user:, category: category_rest, name: 'Two') }
+
+    describe '.filtered_by_name' do
+      subject(:filtered_scope) { described_class.filtered_by_name("%#{event_one.name}%") }
+
+      it { expect(filtered_scope).to match_array([event_one]) }
+    end
+
+    describe '.filtered_by_category' do
+      subject(:filtered_scope) { described_class.filtered_by_category(event_two.category) }
+
+      it { expect(filtered_scope).to match_array([event_two]) }
+    end
+  end
 end
