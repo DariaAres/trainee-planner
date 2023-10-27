@@ -11,6 +11,9 @@ class Event < ApplicationRecord
 
   paginates_per 20
 
+  scope :filtered_by_name, ->(search_params) { where('name like ?', search_params) }
+  scope :filtered_by_category, ->(category_id) { where(category_id:) }
+
   private
 
   def date_cannot_be_in_the_past
