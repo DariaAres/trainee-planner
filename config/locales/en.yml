@@ -54,6 +54,15 @@ en:
     foreign_category: "This is a foreign category"
     name_is_blank: "Name can't be blank"
     date_is_blank: "Event date can't be blank"
+  weather:
+    title: "Weather in this event"
+    wind_speed: "Wind speed"
+    humidity: "Humidity"
+    speed: "km/h"
+    morning: "Morning"
+    day: "Day"
+    evening: "Evening"
+    no_weather: "Only past 2 days data available"
   home:
     user_events_status:
       hello: Hello

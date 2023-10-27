@@ -7,8 +7,7 @@ class WeatherService
   LNG = ENV['LONGITUDE']
 
   def initialize(date:)
-    @date = date.strftime('%Y-%m-%d')
-    @time = date.strftime('%H:%M:%S')
+    @date = date
   end
 
   def call
@@ -22,7 +21,6 @@ class WeatherService
   def uri
     return @uri if defined?(@uri)
 
-    puts event_date
     @uri = URI(BASE_URL)
     params = { lat: LAT, lng: LNG, from: event_date, to: event_date, units: 'si' }
     @uri.query = URI.encode_www_form(params)
@@ -30,6 +28,6 @@ class WeatherService
   end
 
   def event_date
-    "#{@date} #{@time}"
+    "#{@date.strftime('%Y-%m-%d')} #{@date.strftime('%H:%M:%S')}"
   end
 end
