@@ -28,6 +28,8 @@ class WeatherService
   end
 
   def event_date
-    "#{@date.strftime('%Y-%m-%d')} #{@date.strftime('%H:%M:%S')}"
+    return "#{@date.strftime('%Y-%m-%d')} #{@date.strftime('%H:%M:%S')}" if @date.present?
+
+    raise I18n.t('weather.not_available')
   end
 end

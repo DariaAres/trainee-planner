@@ -7,19 +7,27 @@ class WeatherPresenter
   end
 
   def temperature
-    current_weather['temperature']
+    return current_weather['temperature'] if success
+
+    current_weather
   end
 
   def summary
-    current_weather['summary']
+    return current_weather['summary'] if success
+
+    current_weather
   end
 
   def wind_speed
-    current_weather['windSpeed']
+    return current_weather['windSpeed'] if success
+
+    current_weather
   end
 
   def humidity
-    current_weather['humidity']
+    return current_weather['humidity'] if success
+
+    current_weather
   end
 
   def weather_morning
@@ -43,7 +51,7 @@ class WeatherPresenter
   attr_reader :data
 
   def current_weather
-    @current_weather = data['data']['history'].first
+    @current_weather = success ? data['data']['history'].first : I18n.t('weather.not_available')
   end
 
   def join_date(time)

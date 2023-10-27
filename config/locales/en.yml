@@ -35,6 +35,7 @@ en:
     day: "Day"
     evening: "Evening"
     no_weather: "Only past 2 days data available"
+    not_available: "Weather is not available"
   home:
     user_events_status:
       hello: Hello
