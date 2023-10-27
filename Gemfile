@@ -71,6 +71,9 @@ gem 'bootstrap'
 # Paginator for modern web app frameworks and ORMs. [https://github.com/kaminari/kaminari]
 gem 'kaminari'
 
+# Httparty can be used to query web services and examine the resulting output. [https://github.com/jnunemaker/httparty]
+gem 'httparty'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]

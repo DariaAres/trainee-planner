@@ -1,0 +1,66 @@
+<div class="higher-form">
+  <div class="border show-weather">
+    <div class="p-4">
+    <h2><%= t('weather.title') %></h2>
+      <% if @weather.success %>
+        <table>
+          <tr>
+            <td><h1 class="display-3"><%= @weather.temperature %>°C</h1></td>
+            <td class="independent-string">
+              <%= t('weather.wind_speed') %>: <%= @weather.wind_speed %> <%= t('weather.speed') %>
+              <br>
+              <%= t('weather.humidity') %>: <%= @weather.humidity %>%
+            </td>
+          </tr>
+        </table>
+        <p class="text"><%= @weather.summary %></p><br>
+        <table>
+          <tr>
+            <td><h4><%= t('weather.morning')%></h4></td>
+            <td class="independent-string"><h4><%= t('weather.day')%></h4></td>
+            <td class="independent-string"><h4><%= t('weather.evening')%></h4></td>
+          </tr>
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td><h4 class="display-4"><small><%= @weather.weather_morning.temperature %>°C</small></h4></td>
+                  <td>
+                    <%= @weather.weather_morning.wind_speed %> <%= t('weather.speed') %>
+                    <br>
+                    <%= @weather.weather_morning.humidity %>%
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td class="independent-string">
+              <table>
+                <tr>
+                  <td><h4 class="display-4"><small><%= @weather.weather_day.temperature %>°C</small></h4></td>
+                  <td>
+                    <%= @weather.weather_day.wind_speed %> <%= t('weather.speed') %>
+                    <br>
+                    <%= @weather.weather_day.humidity %>%
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td class="independent-string">
+              <table>
+                <tr>
+                  <td><h4 class="display-4"><small><%= @weather.weather_evening.temperature %>°C</small></h4></td>
+                  <td>
+                    <%= @weather.weather_evening.wind_speed %> <%= t('weather.speed') %>
+                    <br>
+                    <%= @weather.weather_evening.humidity %>%
+                  </td>
+                </tr>
+              </table>
+            </td>
+        </table>
+      <% else %>
+        <h4><%= t('weather.no_weather') %></h4>
+      <% end %>
+    </div>
+  </div>
+</div>

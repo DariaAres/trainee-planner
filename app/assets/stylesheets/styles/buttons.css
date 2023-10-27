@@ -71,3 +71,18 @@
 .btn-sm {
     margin-top: 3px;
 }
+
+.btn-success {
+    margin-top: 10px !important;
+}
+
+.btn-success:hover,
+.btn-success:active {
+    background-color: transparent !important;
+    border-color: #ad68e9 !important;
+    color: #8945C4 !important;
+}
+
+.btn-sm {
+    margin-top: 3px;
+}

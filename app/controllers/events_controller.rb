@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'net/http'
+
 class EventsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_event, only: %i[edit update show destroy]
@@ -26,10 +28,7 @@ class EventsController < ApplicationController
   def edit; end
 
   def update
-    unless @category
-      return redirect_to events_path, error: t('event.foreign_category'),
-                                      status: :unprocessable_entity
-    end
+    return redirect_to events_path, error: t('event.foreign_category'), status: :unprocessable_entity unless @category
 
     if @event.update(event_params)
       redirect_to event_path(@event), notice: t('event.event_updated')
@@ -38,7 +37,9 @@ class EventsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @weather = WeatherPresenter.new(new_weather_service, @event.event_date)
+  end
 
   def destroy
     if @event.destroy
@@ -68,5 +69,9 @@ class EventsController < ApplicationController
 
   def search_params
     params.permit(:name, :category_id)
+  end
+
+  def new_weather_service
+    WeatherService.new(date: @event.event_date)
   end
 end

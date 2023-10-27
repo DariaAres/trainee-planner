@@ -11,6 +11,9 @@ env:
   MYSQL_LOG_CONSOLE: true
   MYSQL_PASSWORD: password
   MYSQL_ROOT_USER: root
+  WEATHER_API_KEY: 0cc7cc773480fd15643503d38e3d86d497310ac68c79ec397edc01e2dcfec626
+  LATITUDE: 53.8930
+  LONGITUDE: 27.5674
 
 jobs:
   Rubocop:
@@ -50,16 +53,16 @@ jobs:
           bundle exec rails db:create db:migrate RAILS_ENV=test
           bin/rails assets:precompile
           rspec spec
-          
+
   Code-coverage:
     runs-on: ubuntu-20.04
     steps:
       - name: Workflow access
         uses: actions/checkout@v3
-        
+
       - name: Build app
         uses: ./.github/actions/build
-        
+
       - name: Create Coverage Artifact
         uses: actions/upload-artifact@v2
         with:
