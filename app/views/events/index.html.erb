@@ -1,0 +1,36 @@
+<div class="higher-form">
+  <div class="border index-events">
+    <h1 class="text-center mb-4"><%= t('event.events') %> </h1>
+    <div class="container mb-4">
+      <% if @events.empty? %>
+        <h2 class="text-center p-4"><%= t('event.no_events') %></h2>
+      <% else %>
+      <%= render partial: 'events/select_pagination' %>
+        <table class="table table-hover">
+          <tr>
+            <th class="bg-transparent">#</th>
+            <th class="bg-transparent"><%= t('event.name') %></th>
+            <th class="bg-transparent"><%= t('event.category') %></th>
+            <th class="bg-transparent"><%= t('event.event_date') %></th>
+            <th class="bg-transparent"><%= t('event.date_to_notificate') %></th>
+          </tr>
+          <% @events.each_with_index do |event, index| %>
+            <tr onclick="location.href='<%= event_path(event.id, locale: I18n.locale) %>'">
+              <td class="bg-transparent"> <%= event.id %></td>
+              <td class="bg-transparent"><%= event.name %></td>
+              <td class="bg-transparent"><%= event.category.name %></td>
+              <td class="bg-transparent"><%= event.event_date.strftime("%Y-%m-%d %H:%M:%S") %></td>
+              <% if event.date_to_notificate %>
+                <td class="bg-transparent"><%= event.date_to_notificate.strftime("%Y-%m-%d %H:%M:%S") %></td>
+              <% else %>
+                <td class="bg-transparent"></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </table>
+      <% end %>
+      <%= link_to t('event.create_new'), new_event_path, class: "btn btn-success text-white" %>
+      <div class='center'><%= paginate @events %></div>
+    </div>
+  </div>
+</div>

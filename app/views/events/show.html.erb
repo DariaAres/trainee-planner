@@ -1,0 +1,32 @@
+<div class="higher-form">
+  <div class="border show-event">
+    <div class="p-4">
+      <h2><%= @event.name %></h2>
+      <table>
+        <p class="me-auto text">
+          <tr>
+            <td><%= t('event.date') %>:</td>
+            <td class="independent-string"><%= @event.event_date.strftime("%Y-%m-%d %H:%M:%S") %></td>
+          </tr>
+          <tr>
+            <td><%= t('event.category') %>: </td>
+            <td class="independent-string"><%= @event.category.name %></td>
+          </tr>
+          <% if @event.date_to_notificate%>
+            <tr>
+              <td><%= t('event.remind') %>: </td>
+              <td class="independent-string"><%= @event.date_to_notificate.strftime("%Y-%m-%d %H:%M:%S") %></td>
+            </tr>
+          <% end %>
+        </p>
+      </table>
+      <div class="description">
+        <p class="text mb-4 description"><%= @event.description %></p>
+      </div>
+      <div class="col-sm-6 btns d-flex align-items-center">
+        <%= link_to t('event.edit'), edit_event_path(@event.id, locale: I18n.locale), class: "btn btn-secondary btn-short-width" %>
+        <%= button_to t('event.delete'), event_path(@event.id, locale: I18n.locale), method: :delete, class: "btn btn-danger" %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
     root to: 'home#index'
-    
+    resources :events
     get '/categories/new', to: 'categories#new'
     get '/categories/:id', to: 'categories#edit'
     resources :categories

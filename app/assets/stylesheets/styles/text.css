@@ -4,8 +4,12 @@ a,
 em,
 h4,
 h6,
-.text,
-.dropdown-item {
+h5,
+span,
+th,
+td,
+.dropdown-item,
+.text {
     color: #8945C4 !important;
 }
 
@@ -15,6 +19,28 @@ h6,
 
 .text-denger {
     color: #eb497a;
+}
+
+h3 {
+    color: #2B5035 !important;
+}
+
+.nav-item {
+    width: 110px !important;
+}
+
+.text-white {
+    color: white;
+}
+
+.nav-sm {
+    font-size: 15px !important;
+    text-align: center !important;
+    width: auto !important;
+}
+
+.independent-string {
+    padding-left: 20px !important;
 }
 
 .category {

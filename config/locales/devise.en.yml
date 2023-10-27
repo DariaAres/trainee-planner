@@ -1,7 +1,7 @@
 # Additional translations at https://github.com/heartcombo/devise/wiki/I18n
 
 en:
-  edit_acc: "Edit Account"
+  edit_acc: "Settings"
   sign_out: "Sign Out"
   sign_up: "Sign Up"
   sign_in: "Sign In"
@@ -49,6 +49,8 @@ en:
     confirm_password: "Password confirmation"
     register: "Register"
     remember: "Remember me"
+  event:
+    created: "Event has been successfully created!"
   nav:
     company: "Company"
     me: "Me"

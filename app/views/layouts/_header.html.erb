@@ -1,21 +1,20 @@
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <%= image_tag('header_img.png', draggable: "true", height: '45', width: '35') %>
-    <%= link_to "Trainee Planner", "/", class: "navbar-brand home-link text" %>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <%= link_to t('category.categories'), categories_path, class: "btn btn-secondary" %>
-          <%= render partial: 'layouts/locals' %>
-      </ul> 
-    </div>
+    <%= link_to "Trainee Planner", root_path, class: "navbar-brand home-link text" %>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <%= link_to t('event.my'), events_path, class: "btn btn-secondary btn-sm" %>
+          <%= link_to t('category.categories'), categories_path, class: "btn btn-secondary btn-sm" %>
+          <%= render partial: 'layouts/locals' %>
+      </ul>
       <ul class="navbar-nav">
         <% if current_user %>
-          <li class="nav-item"> <%= link_to "Edit Account", edit_user_registration_path, class: "nav-link" %></li>
-          <li class="nav-item"> <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-small btn-primary mx-2" %></li>
+          <li class="nav-item"> <%= link_to t('user.edit_acc'), edit_user_registration_path, class: "nav-link nav-sm" %></li>
+          <li class="nav-item"> <%= button_to t('user.sign_out'), destroy_user_session_path, method: :delete, class: "btn btn-sm btn-primary" %></li>
         <% else %>
-          <li class="nav-item"> <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %></li>
-          <li class="nav-item"> <%= link_to "Sign In", new_user_session_path, class: "nav-link" %></li>
+          <li class="nav-item"> <%= link_to t('user.sign_up'), new_user_registration_path, class: "nav-link nav-sm" %></li>
+          <li class="nav-item"> <%= link_to t('user.sign_in'), new_user_session_path, class: "nav-link nav-sm" %></li>
         <% end %>
       </ul>
     </div>
