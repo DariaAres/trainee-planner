@@ -2,7 +2,7 @@
 
 class WeatherPresenter
   def initialize(data, date)
-    @data = data.with_indifferent_access
+    @data = data.call.with_indifferent_access
     @date = date
   end
 
@@ -34,6 +34,10 @@ class WeatherPresenter
     get_presenter('19:00:00')
   end
 
+  def success
+    !(data['message'] != 'success')
+  end
+
   private
 
   attr_reader :data
@@ -48,6 +52,6 @@ class WeatherPresenter
 
   def get_presenter(time)
     weather_service = WeatherService.new(date: join_date(time))
-    WeatherPresenter.new(weather_service.call, join_date(time))
+    WeatherPresenter.new(weather_service, join_date(time))
   end
 end

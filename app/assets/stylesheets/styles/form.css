@@ -23,6 +23,13 @@
 
 .show-event {
     width: 60% !important;
+    float: left !important;
+}
+
+.show-weather {
+    width: 39% !important;
+    margin-left: 10px;
+    float: left !important;
 }
 
 .index-events {

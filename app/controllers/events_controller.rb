@@ -38,7 +38,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    @weather = WeatherPresenter.new(new_weather_service.call, @event.event_date)
+    @weather = WeatherPresenter.new(new_weather_service, @event.event_date)
   end
 
   def destroy

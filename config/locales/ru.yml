@@ -30,3 +30,12 @@ ru:
     event_updated: "Событие успешно изменено"
     event_not_updated: "Событие не изменолось"
     foreign_category: "Это чужая категория"
+  weather:
+    title: "Погода во время этого события"
+    wind_speed: "Скорость ветра"
+    humidity: "Влажность"
+    speed: "км/ч"
+    morning: "Утро"
+    day: "День"
+    evening: "Вечер"
+    no_weather: "Доступны данные только за последние 2 дня"
