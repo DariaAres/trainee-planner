@@ -1,33 +1,81 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
+  category:
+    name: "Name"
+    create: "Create"
+    new_c: "New category"
+    edit_c: "Edit category"
+    categories: "Categories"
+    edit: "Edit"
+    delete: "Delete"
+    category_created: "Category has been successfully created"
+    create_new: "Create new"
+    category_deleted: "Category has been deleted successfully"
+    category_updated: "Category has been updated successfully"
+    category_not_deleted: "Category hasn't been deleted successfully"
+    category_not_updated: "Category hasn't been updated successfully"
+    category_not_created: "Category hasn't been successfully created"
+    name_has_taken: "Name has already been taken"
+    name_not_blank: "Name can't be blank"
+  event:
+    events: "Events"
+    edit: "Edit"
+    no_events: "No events"
+    create_new: "Create new"
+    create: "Create"
+    remind: "Remind"
+    delete: "Delete"
+    next: "Next"
+    prev: "Prev"
+    my: "My"
+    event_deleted: "Event has been successfully deleted"
+    events: "Events"
+    edit: "Edit"
+    no_events: "No events"
+    create_new: "Create new"
+    create: "Create"
+    remind: "Remind"
+    delete: "Delete"
+    next: "Next"
+    prev: "Prev"
+    my: "My"
+    name: "Name"
+    category: "Category"
+    date: "Event date"
+    date_to_notificate: "Date to notificate"
+    description: "Description"
+    select: "Select category"
+    search: "Search"
+    event_deleted: "Event has been successfully deleted"
+    date_past: "Date cannot be in the past"
+    mention_future: "Mention of events cannot be later than their date"
+    mention_past: "Mention of events cannot be in the past"
+    event_not_deleted: "Event was not deleted"
+    event_created: "Event has been successfully created"
+    event_not_created: "Event hasn't been successfully created"
+    event_updated: "Event has been successfully updated"
+    event_not_updated: "Event hasn't been successfully updated"
+    foreign_category: "This is a foreign category"
+    name_is_blank: "Name can't be blank"
+    date_is_blank: "Event date can't be blank"
+  weather:
+    title: "Weather in this event"
+    wind_speed: "Wind speed"
+    humidity: "Humidity"
+    speed: "km/h"
+    morning: "Morning"
+    day: "Day"
+    evening: "Evening"
+    no_weather: "Only past 2 days data available"
+    not_available: "Weather is not available"
+  home:
+    user_events_status:
+      hello: Hello
+      events_count: You have %{in_future} events in future (%{today} today)
+    greeting:
+      app_name: Event planner
+      description:
+        This application will help you efficiently organize your time and will always tell you
+        about a business meeting, going to the dentistor a friend's birthday. You no longer need
+        to keep a lot of events in your head, because this is the work of the "Event planner".
+      sign_up: Sign up
